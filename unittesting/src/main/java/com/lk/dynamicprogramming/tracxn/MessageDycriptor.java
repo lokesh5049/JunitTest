@@ -58,6 +58,7 @@ public class MessageDycriptor {
 	 * digits after it i.e. 12345.45648.123.345.1 or 12345.123.1
 	 */
 	public boolean case2(String message) {
+		System.out.println("case2:::orignal message   "+message);
 		boolean flag = false;
 		if (case1(message)) {
 			System.out.println("message size = " + messag.size());
@@ -127,6 +128,7 @@ public class MessageDycriptor {
 	 */
 
 	public boolean case5(String message) {
+		System.out.println(message+"   :: case 5:: actual message");
 		boolean flag = false;
 		int index = 0;
 		StringBuilder builder = new StringBuilder();
@@ -171,19 +173,20 @@ public class MessageDycriptor {
 		System.out.println(builder);
 
 		if (builder != null) {
-
+			System.out.println(new String(builder)+"   :: case 5:: actual message");
 			return new String(builder);
+			
 		}
 
 		return null;
 	}
 
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 
 		MessageDycriptor dycriptor = new MessageDycriptor();
 		String str = "1234502468.123.456135";
 		String str2 = "12345.123.512";
-		System.out.println(dycriptor.case5(str2));
+		System.out.println(dycriptor.case5(str));
 
-	}
+	}*/
 }
